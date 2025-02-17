@@ -1,0 +1,16 @@
+input_files: "/home/mapalhar/alice/MP_plots/LnnTree/MC/MCFolder_data/PbPb_LHC25a4/Train_348384/AO2D_train_348384.root"
+output_dir: "MC/results/"
+output_file: "LnnResults_pbpb_LHC25a4_train_348384"
+tree_names: "O2mclnncands"
+selection: {
+  #"fPtLnn": "fPtLnn > 2",
+  "fCosPA": "fCosPA >  0.995",
+  "fNSigma3H": "abs(fNSigma3H)  < 5",
+  #"fDcaV0Daug": "abs(fDcaV0Daug) < 1",
+  "fLnnRapidity": "abs(fLnnRapidity) < 0.8",
+  "fNTPCclus3H": "fNTPCclus3H > 120",
+  "fTPCchi3H":  "fTPCchi3H < 4", 
+  "fLnnPseudoRapidity": "fLnnPseudoRapidity < abs(0.8)",
+  "fMassTrTOF": "fMassTrTOF > 5.5",
+  "fIsReco": 'fIsReco==True'
+}
